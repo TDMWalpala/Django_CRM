@@ -22,4 +22,7 @@ def home(request):
 def logout_user(request):
     logout(request)
     messages.success(request,"You have been logged out!")
-    return render(request,'home.html', {})
+    return redirect('home')
+
+def register_user(request):
+    return render(request,'register.html',{})
